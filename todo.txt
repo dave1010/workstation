@@ -1,0 +1,16 @@
+
+
+
+Get private stuff from somewhere
+================================
+
+dropbox login
+firefox profile
+thunderbird profile
+keepass
+mounts
+phpstorm license
+git config
+projects (inc. dev) / DBs
+
+
