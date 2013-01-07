@@ -1,0 +1,9 @@
+PreferredAuthentications hostbased,publickey,keyboard-interactive,password 
+#PreferredAuthentications publickey,keyboard-interactive
+
+ForwardAgent yes
+#ForwardX11 yes
+
+Host *
+	ServerAliveInterval 240
+
