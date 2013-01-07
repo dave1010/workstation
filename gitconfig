@@ -1,0 +1,39 @@
+[core]
+    editor = nano
+[diff]
+    tool = meld
+[color]
+    diff = auto
+    status = auto
+    branch = auto
+[alias]
+    st = status
+    ci = commit
+    br = branch
+    co = checkout
+    df = diff
+    d = diff --color-words
+    lg = log -p  --decorate
+    l = "! git --no-pager log --oneline --graph -n 18 --decorate"
+    ll = "log --oneline --graph --decorate --branches"
+    sync = "! git pull && git push"
+    f = "! git status --porcelain| awk '{ print $2 }' | head -n 1" # get the 1st changed file
+    overview = log --graph --simplify-by-decoration --decorate --pretty=format:'%cd%Cgreen%d %Cblue%h %Creset%s' --date=short
+    stage-empty-file = "! git update-index --add --cacheinfo 100644 $(git hash-object -w /dev/null) "
+
+    # top level of repo
+    top=rev-parse --show-toplevel
+    
+    # copy all generic hooks to this repos hook folder
+    setup-hooks="! cp -n ~/bin/git-hooks/* $(git rev-parse --show-toplevel)/.git/hooks/"
+
+
+
+[push]
+    default = tracking
+[merge]
+    stat = true
+[branch]
+    autosetupmerge = true
+[help]
+    autocorrect = 5
