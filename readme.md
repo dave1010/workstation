@@ -1,5 +1,5 @@
 
-= Dave's 64-bit workstation setup
+# Dave's 64-bit workstation setup
 
 Compiled from loads of random scripts over time and space
 
@@ -7,7 +7,7 @@ Usage:
 
     wget -O - https://raw.github.com/dave1010/workstation/master/setup.sh | sudo sh
 
-== To do
+## To do
 
 Make it customizable, maybe from a web interface
  * URL to get keys from
@@ -29,7 +29,7 @@ Setup startup apps:
  * skype
  * gnome-do
 
-== Stuff that may have to be done manually
+## Stuff that may have to be done manually
 
  * xubuntu menu
  * point domain to (static?) IP

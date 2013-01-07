@@ -1,15 +1,19 @@
 #!/bin/bash
 
 # Dave's 64-bit workstation setup
+# Compiled from loads of random scripts over time and space
 # 
 # Usage: 
 # wget -O - https://github.com/dave1010/workstation/setup.sh | sudo sh
+#
 
-
-test "$(whoami)" != 'root' && echo Must be ran as root && exit 1
 
 REPO="https://raw.github.com/dave1010/workstation/master"
 GITHUB_USERNAME="dave1010"
+
+
+
+test "$(whoami)" != 'root' && echo "Must be ran as root" && exit 1
 
 ################################################################################
 # SSH
