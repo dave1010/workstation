@@ -7,7 +7,7 @@
 # wget -O - https://github.com/dave1010/workstation/setup.sh | sudo sh
 #
 
-WS=`~/.workstation`
+WS="~/.workstation"
 
 #REPO="https://raw.github.com/dave1010/workstation/master"
 GITHUB_USERNAME="dave1010"
