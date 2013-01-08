@@ -79,9 +79,8 @@ if [ 1 -eq 2 ]; then
     apt-get update
 fi
 
-source $WP/install/lamp.sh
+source $WS/install/lamp.sh
 
-exit
 #which tasksel >    /dev/null || apt-get install -y tasksel
 #
 #if ! which php > /dev/null; then
