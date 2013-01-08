@@ -8,8 +8,7 @@
 #
 
 WS=`dirname $0`
-echo $WS
-exit
+
 
 #REPO="https://raw.github.com/dave1010/workstation/master"
 GITHUB_USERNAME="dave1010"
