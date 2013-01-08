@@ -9,8 +9,8 @@ WS=`dirname $0`
 source $WS/config.sh
 
 
-source $WS/ssh.sh
-source $WS/repos.sh
+source $WS/setup/ssh.sh
+source $WS/setup/repos.sh
 
 
 ################################################################################
@@ -46,8 +46,8 @@ source $WS/install/phpstorm.sh
 
 ## PUBLIC SETUP
 
-source $WS/apache.sh
-source $WS/bash.sh
+source $WS/setup/apache.sh
+source $WS/setup/bash.sh
 
 # clean up
 apt-get autoclean

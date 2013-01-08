@@ -3,29 +3,28 @@
 
 Compiled from loads of random scripts over time and space
 
-Usage: 
+## Usage
 
-    wget -O - https://raw.github.com/dave1010/workstation/master/setup.sh | sudo sh
+    wget -O - j.mp/davesworkstation | sudo sh
+
+## Configuration
+
+1. Clone this repo
+2. Edit `config.sh` and `bootstrap.sh`
+3. Run this:
+
+    wget -O - https://raw.github.com/YOUR-GITHUB-USERNAME/workstation/master/bootstrap.sh | sudo sh
 
 ## To do
 
-Make it modular (maybe install git 1st and clone this repo)
+ * Work out what apt repositories need adding
+ * Preset the mysqld password so there's no user prompt
+ * Sublime text 2 plugins
+ * Add user to apache group & setup umask
+ * git config
 
-Make it customizable, maybe from a web interface
- * URL to get keys from
- * Apache servername
+### Setup startup apps
 
-Work out what apt repositories need adding
-
-Preset the mysqld password so there's no user prompt
-
-Sublime text 2 plugins
-
-Add user to apache group
-
-Setup umask?
-
-Setup startup apps:
  * ssh key agent
  * gnome keyring
  * skype
