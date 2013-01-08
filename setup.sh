@@ -91,25 +91,45 @@ else
     echo "ssh server already installed"
 fi
 
+apt-get install -y \
+    htop \
+    git-all \
+    nmap \
+    curl \
+    clamtk \
+    gparted \
+    terminator \
+    virtualbox \
+    keepass2 \
+    gnome-do \
+    skype \
+    remmina \
+    libreoffice
 
 
-which htop >       /dev/null || apt-get install -y htop
-which terminator > /dev/null || apt-get install -y terminator
-which git >        /dev/null || apt-get install -y git-all
-which virtualbox > /dev/null || apt-get install -y virtualbox
-which keepass2 >   /dev/null || apt-get install -y keepass2
-which gnome-do >   /dev/null || apt-get install -y gnome-do
-which nmap >       /dev/null || apt-get install -y nmap
-which curl >       /dev/null || apt-get install -y curl
-which skype >      /dev/null || apt-get install -y skype
-which clamtk >     /dev/null || apt-get install -y clamtk
-which remmina >    /dev/null || apt-get install -y remmina
+## commandline
+#which htop >        /dev/null || apt-get install -y htop
+#which git >         /dev/null || apt-get install -y git-all
+#which nmap >        /dev/null || apt-get install -y nmap
+#which curl >        /dev/null || apt-get install -y curl
+#
+##system 
+#which clamtk >      /dev/null || apt-get install -y clamtk
+#which gparted >     /dev/null || apt-get install -y gparted
+#
+#which terminator >  /dev/null || apt-get install -y terminator
+#which virtualbox >  /dev/null || apt-get install -y virtualbox
+#which keepass2 >    /dev/null || apt-get install -y keepass2
+#which gnome-do >    /dev/null || apt-get install -y gnome-do
+#which skype >       /dev/null || apt-get install -y skype
+#which remmina >     /dev/null || apt-get install -y remmina
+#which libreoffice > /dev/null || apt-get install -y libreoffice
 
 
-#adobe air
-#balsamiq
-#screencloud
-#gparted
+# synapse instead of gnome-do?
+
+#REMOVE
+which abiword > /dev/null && apt-get remove -y abiword
 
 
 # make sure all packages are up to date
@@ -179,6 +199,27 @@ else
     echo "PhpStorm already installed"
 fi
 
+##adobe air
+#if ! dpkg -l adobeair > /dev/null; then
+#    echo "Installing Adobe Air"
+#    #wget "http://airdownload.adobe.com/air/lin/download/latest/AdobeAIRInstaller.bin"
+#    #chmod u+x AdobeAir*
+#    #./AdobeAir*
+#    wget "http://update.devolo.com/linux/apt/pool/main/a/adobeair/adobeair_2.6.0.19170_amd64.deb"
+#    dpkg -i adobeair*
+#else
+#    echo "Adobe Air already installed"
+#fi
+#
+##balsamiq
+#if ! dpkg -l balsamiq* > /dev/null; then
+#    echo "Installing Balsamiq"
+#    wget "http://builds.balsamiq.com/b/mockups-desktop/MockupsForDesktop64bit.deb"
+#    dpkg -i Mockups*
+#else
+#    echo "Balsamiq already installed"
+#fi
+
 
 ################################################################################
 
@@ -241,7 +282,7 @@ if [ ! -e ~/.bash_aliases ]; then
     ln -s ~/scripts/aliases.sh ~/.bash_aliases
 fi
 
-if ! grep bash_extras ~/.bashrc; then
+if ! grep bash_extras ~/.bashrc > /dev/null; then
     # add custom stuff to .bashrc easily
     echo "source ~/scripts/bash_extras" >> ~/.bashrc
 fi

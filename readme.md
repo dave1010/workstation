@@ -9,6 +9,8 @@ Usage:
 
 ## To do
 
+Make it modular (maybe install git 1st and clone this repo)
+
 Make it customizable, maybe from a web interface
  * URL to get keys from
  * Apache servername
