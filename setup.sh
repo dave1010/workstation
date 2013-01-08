@@ -7,8 +7,9 @@
 # wget -O - https://github.com/dave1010/workstation/setup.sh | sudo sh
 #
 
+WS=`dirname $0`
 
-REPO="https://raw.github.com/dave1010/workstation/master"
+#REPO="https://raw.github.com/dave1010/workstation/master"
 GITHUB_USERNAME="dave1010"
 
 
@@ -30,17 +31,19 @@ if [ ! -f ~/.ssh/id_rsa ]; then
     wget -O ~/.ssh/id_rsa $DBURL
 fi
 
-if [ ! -f ~/.ssh/id_rsa.pub ]; then
-    wget -O ~/.ssh/id_rsa.pub $REPO/ssh/id_rsa.pub
-fi
+cp -nv $WS/ssh/* ~/.ssh/
 
-if [ ! -f ~/.ssh/config ]; then
-    wget -O ~/.ssh/config $REPO/ssh/config
-fi
-
-if [ ! -f ~/.ssh/known_hosts ]; then
-    wget -O ~/.ssh/known_hosts $REPO/ssh/known_hosts
-fi
+#if [ ! -f ~/.ssh/id_rsa.pub ]; then
+#    wget -O ~/.ssh/id_rsa.pub $REPO/ssh/id_rsa.pub
+#fi
+#
+#if [ ! -f ~/.ssh/config ]; then
+#    wget -O ~/.ssh/config $REPO/ssh/config
+#fi
+#
+#if [ ! -f ~/.ssh/known_hosts ]; then
+#    wget -O ~/.ssh/known_hosts $REPO/ssh/known_hosts
+#fi
 
 chmod -R 600 ~/.ssh
 chmod 700 ~/.ssh
@@ -51,13 +54,13 @@ chown -R $SUDO_USER:$SUDO_USER ~/.ssh
 
 ################################################################################
 # make a directory to chuck temporary downloads in
-if [ ! -d ~/.workstation ]; then
-    mkdir ~/.workstation
-    chown $SUDO_USER:$SUDO_USER ~/.workstation
-fi
-
-
-cd ~/.workstation
+#if [ ! -d ~/.workstation ]; then
+#    mkdir ~/.workstation
+#    chown $SUDO_USER:$SUDO_USER ~/.workstation
+#fi
+#
+#
+#cd ~/.workstation
 
 ################################################################################
 
@@ -75,15 +78,16 @@ if [ 1 -eq 2 ]; then
     apt-get update
 fi
 
-which tasksel >    /dev/null || apt-get install -y tasksel
-
-if ! which php > /dev/null; then
-    # do this early as it will ask for mysql PW 3 times
-    # todo: preset PW: http://serverfault.com/questions/19367/scripted-install-of-mysql-on-ubuntu
-    tasksel install lamp-server
-else
-    echo "LAMP stack already installed"
-fi
+source $WP/install/lamp.sh
+#which tasksel >    /dev/null || apt-get install -y tasksel
+#
+#if ! which php > /dev/null; then
+#    # do this early as it will ask for mysql PW 3 times
+#    # todo: preset PW: http://serverfault.com/questions/19367/scripted-install-of-mysql-on-ubuntu
+#    tasksel install lamp-server
+#else
+#    echo "LAMP stack already installed"
+#fi
 
 if ! which sshd > /dev/null; then
     tasksel install openssh-server

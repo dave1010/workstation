@@ -14,10 +14,10 @@ test "$(whoami)" != 'root' && echo "Must be ran as root" && exit 1
 which git > /dev/null || apt-get install -y git-all
 
 if [ ! -d ~/.workstation/.git ]; then
-    git clone $REPO ~/.workstation
+    sudo -u $SUDO_USER git clone $REPO ~/.workstation
 else
     cd ~/.workstation
-    git pull
+    sudo -u $SUDO_USER git pull
 fi
 
 ~/.workstation/setup.sh
