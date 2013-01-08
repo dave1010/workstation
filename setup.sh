@@ -7,7 +7,7 @@
 # wget -O - https://github.com/dave1010/workstation/setup.sh | sudo sh
 #
 
-WS=`dirname $0`
+WS=`~/.workstation`
 
 #REPO="https://raw.github.com/dave1010/workstation/master"
 GITHUB_USERNAME="dave1010"
@@ -79,6 +79,8 @@ if [ 1 -eq 2 ]; then
 fi
 
 source $WP/install/lamp.sh
+
+exit
 #which tasksel >    /dev/null || apt-get install -y tasksel
 #
 #if ! which php > /dev/null; then
