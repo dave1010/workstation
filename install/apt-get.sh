@@ -14,7 +14,10 @@ apt-get install -y \
     gnome-do \
     skype \
     remmina \
-    libreoffice
+    libreoffice \
+    build-essential \
+    ruby-full \
+    rubygems
 
 
 # synapse instead of gnome-do?

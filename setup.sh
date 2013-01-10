@@ -36,6 +36,7 @@ apt-get upgrade -y
 apt-get dist-upgrade -y
 
 
+source $WS/install/sass.sh
 source $WS/install/java.sh
 source $WS/install/dropbox.sh
 source $WS/install/google-chrome.sh
