@@ -17,7 +17,8 @@ apt-get install -y \
     libreoffice \
     build-essential \
     ruby-full \
-    rubygems
+    rubygems \
+    tilda
 
 
 # synapse instead of gnome-do?
