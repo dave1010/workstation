@@ -42,6 +42,7 @@ source $WS/install/dropbox.sh
 source $WS/install/google-chrome.sh
 source $WS/install/sublime-text.sh
 source $WS/install/phpstorm.sh
+source $WS/install/silver-searcher.sh
 #source $WS/install/balsamiq.sh
 
 
