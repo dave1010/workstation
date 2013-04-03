@@ -1,53 +1,65 @@
 #!/bin/bash
 
-# TODO: split into sections
+# system / libs
+apt-get install -y \
+    build-essential \
+    clamtk \
+    gparted \
+    ttf-mscorefonts-installer \
+    flashplugin-installer \
+    cifs-utils \
+    libmtp9 \
+    network-manager-vpnc \
+    xubuntu-restricted-extras \
+    libmagickwand-dev \
 
+
+# commandline tools
 apt-get install -y \
     htop \
     git-all \
     nmap \
     curl \
-    clamtk \
-    gparted \
-    terminator \
-    virtualbox \
-    keepass2 \
-    gnome-do \
-    skype \
-    remmina \
-    libreoffice \
-    build-essential \
     ruby-full \
     rubygems \
-    tilda \
-    ttf-mscorefonts-installer \
-    xfce4-clipman \
-    xfce4-clipman-plugin \
-    xfce4-goodies \
+    mailutils \
     unrar \
+    mplayer \
+    imagemagick \
+    skipfish \
+    qrencode \
+    p7zip-full \
+
+
+# lamp
+apt-get install -y \
     php5-xdebug \
     php-pear \
     php5-curl \
-    flashplugin-installer \
-    mailutils \
-    mplayer \
-    imagemagick \
-    libmagickwand-dev \
-    cifs-utils \
-    scrot \
-    xclip \
+    php5-sybase \
+
+
+# gui / office / productivity
+apt-get install -y \
+    keepass2 \
+    skype \
+    remmina \
+    libreoffice \
+    terminator \
+    virtualbox \
+    tilda \
     pinta \
     gimp \
     meld \
-    p7zip-full \
-    skipfish \
-    xubuntu-restricted-extras \
-    libmtp9 \
-    qrencode \
-    network-manager-vpnc \
-    php5-sybase \
-    wireshark
+    wireshark \
 
 
-# synapse instead of gnome-do?
+# gui / desktop
+apt-get install -y \
+    gnome-do \
+    xfce4-clipman \
+    xfce4-clipman-plugin \
+    xfce4-goodies \
+    scrot \
+    xclip \
 
