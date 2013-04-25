@@ -24,7 +24,8 @@ a2enmod expires
 a2enmod vhost_alias
 
 if [ ! -h /etc/apache2/sites-enabled/projects ]; then
-    cp $WS/apache/projects /etc/apache2/sites-available/projects 
+    # todo: this didn't work
+    cp $WS/apache/projects /etc/apache2/sites-available/projects
     a2ensite projects
 fi
 
