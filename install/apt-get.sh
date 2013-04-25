@@ -12,6 +12,7 @@ apt-get install -y \
     network-manager-vpnc \
     xubuntu-restricted-extras \
     libmagickwand-dev \
+    graphviz
 
 
 # commandline tools
@@ -29,6 +30,7 @@ apt-get install -y \
     skipfish \
     qrencode \
     p7zip-full \
+    ack-grep
 
 
 # lamp
@@ -37,6 +39,9 @@ apt-get install -y \
     php-pear \
     php5-curl \
     php5-sybase \
+    php5-xsl \
+    php-apc \
+    php5-tidy
 
 
 # gui / office / productivity
