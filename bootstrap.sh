@@ -7,7 +7,7 @@
 # wget -O - https://github.com/dave1010/workstation/bootstrap.sh | sudo sh
 #
 
-REPO="git://github.com/dave1010/workstation.git"
+REPO="git://github.com/jonginn/workstation.git"
 
 test "$(whoami)" != 'root' && echo "Must be ran as root" && exit 1
 
