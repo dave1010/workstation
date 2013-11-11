@@ -1,6 +1,5 @@
-
 # used for scripts repo
-GITHUB_USERNAME="dave1010"
+GITHUB_USERNAME="jonginn"
 
 # used for apache
 SERVERNAME="dh.devba.se"
