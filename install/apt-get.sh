@@ -41,7 +41,8 @@ apt-get install -y \
     php5-sybase \
     php5-xsl \
     php-apc \
-    php5-tidy
+    php5-tidy \
+    phpmyadmin
 
 
 # gui / office / productivity
