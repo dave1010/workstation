@@ -1,4 +1,3 @@
-
 # Dave's 64-bit workstation setup
 
 Compiled from loads of random scripts over time and space
@@ -9,7 +8,7 @@ Compiled from loads of random scripts over time and space
 
 ## Configuration
 
-1. Clone this repo
+1. Fork this repo
 2. Edit `config.sh` and `bootstrap.sh`
 3. Run this:
 

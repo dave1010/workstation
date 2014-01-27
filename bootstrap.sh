@@ -4,10 +4,10 @@
 # Compiled from loads of random scripts over time and space
 # 
 # Usage: 
-# wget -O - https://github.com/dave1010/workstation/bootstrap.sh | sudo sh
+# wget -O - https://github.com/jonginn/workstation/bootstrap.sh | sudo sh
 #
 
-REPO="git://github.com/dave1010/workstation.git"
+REPO="git://github.com/jonginn/workstation.git"
 
 test "$(whoami)" != 'root' && echo "Must be ran as root" && exit 1
 
