@@ -2,5 +2,5 @@
 GITHUB_USERNAME="jonginn"
 
 # used for apache
-SERVERNAME="dh.devba.se"
+SERVERNAME="jg.devba.se"
 
